@@ -1,4 +1,4 @@
-/* CSS del Template di Airbnb Towns Page */
+/* CSS del Template di Airbnb Towns Page (Viewport Ed.) */
 
 /* Reset margini e paddin */
 * {
@@ -6,39 +6,38 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Definizione sfondo pagina */
-body {
-  background-image: url(../img/container_bgr.jpg);
+/* Classe per il box relativo alla singola città */
+.town {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+/* Classe particolarizzata per Roma */
+.rome {
+  background-image: url(../img/rome_fhd.jpg);
   background-size: cover;
 }
-/* Contenitore generale */
-.container {
-  margin: 30px auto;
-}
-/* Classe del riquadro città */
-.town {
-  margin: 10px auto;
-  width: 250px;
-  height: 190px;
-  position: relative;
-  border: solid 3px white;
-}
-/* Classe di Roma */
-.rome {
-  background-image: url(../img/rome.jpg);
-  background-size: contain;
-}
-/* Classe di Copenaghen */
+/* Classe particolarizzata per Copenaghen */
 .copenaghen {
-  background-image: url(../img/copenaghen.png);
-  background-size: contain;
+  background-image: url(../img/copenaghen_fhd.jpg);
+  background-size: cover;
 }
-/* Classe di Tokyo */
+/* Classe particolarizzata per Tokyo */
 .tokyo {
-  background-image: url(../img/tokyo.png);
-  background-size: contain;
+  background-image: url(../img/tokyo_fhd.jpg);
+  background-size: cover;
 }
-/* Classe fog per il layout oscurità */
+/* Classe relativa al titolo del box città */
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  text-shadow: 4px 4px 10px darkcyan;
+}
+/* Classe espansa sul box città per creare l'effetto oscurità */
 .fog {
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -46,16 +45,4 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-}
-/* Classe titolo con centratura rispetto al blocco .town */
-.title {
-  font-size: 26px;
-  font-weight: 400;
-  color: white;
-  text-shadow: 2px 2px 1px black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  z-index: 1;
 }
