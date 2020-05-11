@@ -36,6 +36,7 @@
   color: white;
   font-size: 60px;
   text-shadow: 4px 4px 10px darkcyan;
+  z-index: 999;
 }
 /* Classe espansa sul box città per creare l'effetto oscurità */
 .fog {
@@ -45,4 +46,8 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+/* Classe con selettore hover per eliminare oscurità */
+.town:hover .fog {
+  display: none;
 }
